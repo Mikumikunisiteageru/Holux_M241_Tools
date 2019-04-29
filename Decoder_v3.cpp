@@ -34,12 +34,12 @@ int main (void) {
 			m ++;
 			fprintf (fout, "%d\t", m);		
 			// DATE & TIME		
-			time_t t = k;
 			// INT OVERFLOW OCCURED AT UTC+0
 				// 2019-04-22T09:40:16
 			// FIXED ON 2019-04-29
-			if (t < 1073741824ll)
-				t += 0x24EA0000;
+			if (k < 1073741824ll)
+				k += 0x24EA0000;
+			time_t t = k;
 			struct tm *lt;
 			lt = localtime (&t);
 			char timestr[20];
