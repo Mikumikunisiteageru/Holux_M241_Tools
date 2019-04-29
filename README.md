@@ -1,4 +1,5 @@
 [//]: # (Holux_M241_Tools/README.md)
+[//]: # (20190429)
 
 # Holux_M241_Tools
 
@@ -16,5 +17,12 @@ Written in C++ and MATLAB.
  
 ## Update History
 
-- 2018.6.1: ver. 1
-  
+- 2018.5.31: ver.1
+- 2018.6.1: ver.2
+- 2019.4.29: ver.3
+
+## Newest Feature of Decoder_V3
+
+Since UTC+0 2019-04-22T09:40:16, M241 is no longer able to display the time or to log it correctly. The problem was caused by some integer digit overflow at that time. After that all time records were shifted to 7,168.00000 days earlier.
+
+`Decoder_V3.cpp` solved this problem by adding the 7,168 days back.
